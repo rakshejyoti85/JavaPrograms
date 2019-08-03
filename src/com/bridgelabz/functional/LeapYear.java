@@ -13,8 +13,8 @@ public class LeapYear {
 	    {
 	        Scanner scanner = new Scanner(System.in);
 	        System.out.println("Enter any year:");
-	        int year = scanner.nextInt();
-	        boolean flag = false;
+	        int year =Utility.intergervalue();
+	    		        boolean flag = false;
 	        Utility.leap(year);
 scanner.close();
 	    }

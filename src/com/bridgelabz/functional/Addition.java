@@ -1,6 +1,6 @@
 /******************************************************************************
 
- *  
+
  *  Purpose: To add the two numbers.
  *
  *  @author  :Rakshe Jyoti
@@ -21,12 +21,14 @@ public static void main(String args[])
 	System.out.println("We  need addition of two numbers");
 	
 	System.out.println("Enter the first number:");
-	int FirstNumber =scanner.nextInt();
+	int FirstNumber =Utility.intergervalue();
 	
 	System.out.println("enter the second no:");
-	int SecondNumber=scanner.nextInt();
+	int SecondNumber =Utility.intergervalue();
+		
 		int sum = Utility.add(FirstNumber,SecondNumber);
 		System.out.println("Addition of two numbers:"+sum);
+		System.out.println("welcome");
 		scanner.close();
 }
 }

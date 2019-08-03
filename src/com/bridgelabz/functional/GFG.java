@@ -9,7 +9,9 @@
  *
  ******************************************************************************/
 package com.bridgelabz.functional;
-import java.util.Scanner;
+//import java.util.Scanner;
+
+import com.bridgelabz.utility.Utility;
 
  
 public class GFG
@@ -30,11 +32,13 @@ public class GFG
      
     public static void main(String[] args)
     {
-        Scanner sc = new Scanner(System.in);
+       // Scanner sc = new Scanner(System.in);
          
         System.out.println("Enter The three names :");
+    	String inputString =Utility.stringvalue();
+
          
-        String inputString = sc.nextLine();
+        //String inputString = nextLine();
        
          
         String outputString = reverseTheSentence(inputString);
@@ -44,6 +48,6 @@ public class GFG
          
         System.out.println("Output String : "+"Hii"+" "+outputString);
          
-        sc.close();
+  //      sc.close();
     }
 }
