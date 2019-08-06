@@ -1,7 +1,7 @@
 /******************************************************************************
 
 
- *  Purpose: To perform trignometric operations.
+*  Purpose: To perform trignometric operations.
  *
  *  @author  :Rakshe Jyoti
  *  @version 1.0

@@ -146,6 +146,10 @@ public class Utility {
 		
 		
 		
+		/**
+		 * @param x
+		 * @param y
+		 */
 		public static void ED (int x,int y)
 		{
 			double distance =Math. sqrt(x*x + y*y);
@@ -259,35 +263,150 @@ public class Utility {
 		return rad;
 		}
 		
-		public static int coin(int heads,int toss,int random,int counter,int tails)
-		{  while (counter < toss){
-			  
-	 	         
-			  
-	 	        if (random > 0.5) {
-	 
-	 	            heads = heads + 1;
-	 
-	 	            System.out.println("Head");
-	 
-	 	        }
-
-	 	        else {
-	 
-	 	            tails = tails + 1;
-	 
-	 	            System.out.println("Tail");
-	 
-	 	        }
-	 
-	 	            counter++;
-	 
-	 	          //  random = toss.nextInt(2);
-	 
-	 	    }
-		return toss;
-}
+		/**
+		 * @param times
+		 * @return
+		 */
+		public static int flipcoin(int times) {
+			
+			double heads = 0;
+			for(int i=0;i<times;i++)
+			{
+				if (Math.random() > 0.5)
+				{
+					heads++;
+				}
+			}
+			System.out.println("heads percentage is " + (float) (heads / times) * 100);
+			System.out.println("tails percentage is " + (float) (times - heads) / times * 100);
+			return 0;
+			
+		}
+		
+		
+		/**
+		 * @param n
+		 * @param i
+		 * @return
+		 */
+		public static int powerof2 (int n,int i)
+		{
+			int power=1;
+			  while (i <= n)
+	            {
+	                System.out.println("2^"+i+" = " + power);
+	                power = power * 2;
+	                i++;
+		}
+			  return power;
 }
 			
-
+		/**
+		 * @param n
+		 * @return
+		 */
+		public static double harmonicnumber (double n)
+		{
+			 // compute 1/1 + 1/2 + 1/3 + ... + 1/n
+	        double sum=0.0;
+	        int i=1;
+	        for ( i = 1; i <= n; i++) {
+	            sum += 1.0 / i;
+	        }
+			return sum;
+		}
 		
+		
+		/**
+		 * @param t
+		 * @param epsilon
+		 * @param c
+		 * @return
+		 */
+		public static double sqrtcal (double t,double epsilon,double c)
+		{
+		
+        while(Math.abs(t-c/t) > epsilon*t) 
+        {
+            t = (c/t+t)/2.0;
+        }
+        return t;
+		}		
+		
+		/**
+		 * @param i
+		 * @param j
+		 * @param s1
+		 * @param s2
+		 * @param flag
+		 * @return
+		 */
+		/**
+		 * @param s1
+		 * @param s2
+		 * @return
+		 */
+		/**
+		 * @param s1
+		 * @param s2
+		 * @return
+		 */
+		/**
+		 * @param s1
+		 * @param s2
+		 * @return
+		 */
+		public static int primeno(int s1,int s2)
+		{
+			int flag=0;
+			int i;
+			//int i,j;
+			 for( i = s1; i <= s2; i++)
+	         {
+	             for(int  j = 2; j < i; j++)
+	             {
+	                 if(i % j == 0)
+	                 {
+	                     flag = 0;
+	                     break;
+	                 }
+	                 else
+	                 {
+	                     flag = 1;
+	                 }
+	              
+	             }
+//	             System.out.println(i);
+	             if(flag == 1)
+	             {
+	            	// System.out.println ("The prime numbers in between the entered limits are :");
+	                System.out.println(i);
+		             }
+			
+				 
+	         }return i;
+		}
+		
+
+	 	 public static void printRep(int arr[],int size)  
+	 	    { 
+	 	        int  i,j; 
+	 	        System.out.println("Repeated Elements are :"); 
+	 	        for (i = 0; i < size; i++)  
+	 	        { 
+	 	            for (j = i + 1; j < size; j++)  
+	 	            { 
+	 	                if (arr[i] == arr[j])  
+	 	                   System.out.print(arr[i] + " "); 
+	 	            } 
+	 	        } 
+	 	        //	return arr[i];
+	 	    } 
+	 	 
+	 	 
+	 	 
+	 	 
+	 	 
+		
+}	
+
