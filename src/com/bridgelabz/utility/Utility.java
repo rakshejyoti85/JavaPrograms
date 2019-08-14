@@ -10,6 +10,7 @@
  ******************************************************************************/
 
 package com.bridgelabz.utility;
+import java.util.Arrays;
 import java.util.Scanner;
 public class Utility {
 	static Scanner scanner=new Scanner(System.in);
@@ -310,7 +311,8 @@ public class Utility {
 			 // compute 1/1 + 1/2 + 1/3 + ... + 1/n
 	        double sum=0.0;
 	        int i=1;
-	        for ( i = 1; i <= n; i++) {
+	        for ( i = 1; i <= n; i++) 
+	        {
 	            sum += 1.0 / i;
 	        }
 			return sum;
@@ -388,7 +390,11 @@ public class Utility {
 		}
 		
 
-	 	 public static void printRep(int arr[],int size)  
+	 	 /**
+	 	 * @param arr
+	 	 * @param size
+	 	 */
+	 	public static void printRep(int arr[],int size)  
 	 	    { 
 	 	        int  i,j; 
 	 	        System.out.println("Repeated Elements are :"); 
@@ -400,13 +406,173 @@ public class Utility {
 	 	                   System.out.print(arr[i] + " "); 
 	 	            } 
 	 	        } 
-	 	        //	return arr[i];
+	 	  
 	 	    } 
 	 	 
 	 	 
 	 	 
-	 	 
-	 	 
+	 	/**
+	 	 * @param a
+	 	 * @param n
+	 	 */
+	 	public static void getSecondSmallest1(int[] a,int n)
+	 	{  
+	 		int temp;
+	 		  for (int i = 0; i < n; i++) 
+
+	 		    {
+
+	 		        a[i] = Utility.intergervalue();
+
+	 		    }
+
+	 		    for (int i = 0; i < n; i++) 
+
+	 		    {
+
+	 		        for (int j = i + 1; j < n; j++) 
+
+	 		        {
+
+	 		            if (a[i] > a[j]) 
+
+	 		            {
+
+	 		                temp = a[i];
+
+	 		                a[i] = a[j];
+
+	 		                a[j] = temp;
+	 		             
+	 		            }
+	 		           
+	 		        }
+	 		       
+	 		       
+	 	}
+	 		  
+	 	
+	 	}
+	 	  /**
+	 	 * @param n
+	 	 * @return
+	 	 */
+	 	public static int primeFactors(int n) 
+	 	    { 
+	 	        while (n%2==0) 
+	 	        { 
+	 	            System.out.print(2 + " "); 
+	 	            n /= 2; 
+	 	        } 
+	 	  
+	 	       
+	 	        for (int i = 3;i <= Math.sqrt(n); i+= 2) 
+	 	        { 
+	 	            
+	 	            while (n%i == 0) 
+	 	            { 
+	 	                System.out.print(i + " "); 
+	 	                n /= i; 
+	 	            } 
+	 	        } 
+	 	  
+	 	        
+	 	        if (n > 2) 
+	 	            System.out.print(n);
+	 	        
+				return 0;
+				
+	 	    } 
+	 	  
+	 	  
+	 	  
+	 /**
+	 * @param n
+	 * @return
+	 */
+	public	 static int generateSquare(int n) 
+	     { 
+	         int[][] magicSquare = new int[n][n]; 
+	           
+	         // Initialize position for 1 
+	         int i = n/2; 
+	         int j = n-1; 
+	    
+	         // One by one put all values in magic square 
+	         for (int num=1; num <= n*n; ) 
+	         { 
+	             if (i==-1 && j==n) //3rd condition 
+	             { 
+	                 j = n-2; 
+	                 i = 0; 
+	             } 
+	             else
+	             { 
+	                 //1st condition helper if next number  
+	                 // goes to out of square's right side 
+	                 if (j == n) 
+	                     j = 0; 
+	                       
+	                 //1st condition helper if next number is  
+	                 // goes to out of square's upper side 
+	                 if (i < 0) 
+	                     i=n-1; 
+	             } 
+	               
+	             //2nd condition 
+	             if (magicSquare[i][j] != 0)  
+	             { 
+	                 j -= 2; 
+	                 i++; 
+	                 continue; 
+	             } 
+	             else
+	                 //set number 
+	                 magicSquare[i][j] = num++;  
+	                   
+	             //1st condition 
+	             j++;  i--;  
+	         } 
+	    
+	         // print magic square 
+	         System.out.println("The Magic Square for "+n+":"); 
+	         System.out.println("Sum of each row or column "+n*(n*n+1)/2+":"); 
+	         for(i=0; i<n; i++) 
+	         { 
+	             for(j=0; j<n; j++) 
+	                 System.out.print(magicSquare[i][j]+" "); 
+	             System.out.println(); 
+	         }
+			return j; 
+	     } 
+	
+	/**
+	 * @param n
+	 * @return
+	 */
+	public static boolean isPrime(int no) 
+	    { 
+	        // Corner case 
+	        if (no<= 1) 
+	           return false; 
+	        System.out.println(" false"); 
+	         //Check from 2 to n-1 
+	      
+	        for (int i = 2; i < no; i++) 
+	            if (no % i == 0) 
+	              return false; 
+	      //   System.out.println(" true") ;
+	         return true; 
+	        
+		      }
+	
+
+	
+		         
+		           
+		 }
+	    
+
 		
-}	
+
 

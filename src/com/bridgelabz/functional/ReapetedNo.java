@@ -1,3 +1,16 @@
+/******************************************************************************
+
+
+ *  Purpose: To find repeated no . in an array.
+ *
+ *  @author  :Rakshe Jyoti
+ *  @version 1.0
+ *  @since   06-08-2019
+ *
+ ***************************************************************************/
+
+
+
 package com.bridgelabz.functional;
 //import com.bridgelabz.utility.Utility;
 import com.bridgelabz.utility.Utility;
